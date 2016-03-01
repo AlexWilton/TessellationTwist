@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+
+  <title>Tessellation & Twisted - 120006063</title>
+  <script id="vertex-shader" type="x-shader/x-vertex">
+  attribute vec4 vPosition;
+  uniform float angle;
+  void main()
+  {
+      gl_Position = vPosition;
+  }
+  </script>
+  <script id="fragment-shader" type="x-shader/x-fragment">
+  precision mediump float;
+  void
+  main(){
+      gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );
+  }
+  </script>
+  <script type="text/javascript" src="Common/webgl-utils.js"></script>
+  <script type="text/javascript" src="Common/initShaders.js"></script>
+  <script type="text/javascript" src="Common/MV.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+  </head>
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron">
+        <h1>Twist 1 Example</h1>
+        <h2>Computer Graphics Practical (120006063)</h2>
+        <ul class="nav nav-pills">
+          <li role="presentation"><a href="index.html">Interactive (Home)</a></li>
+          <li role="presentation" ><a href="twist1.html">Example 1</a></li>
+          <li role="presentation"><a href="twist2.html">Example 2</a></li>
+          <li role="presentation" class="active"><a href="twist3.html">Example 3</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+        <canvas id="gl-canvas" class="center-block" width="600" height="600">
+          Oops ... your browser doesn't support the HTML5 canvas element
+        </canvas>
+      <div class="row center-block">
+        <div class="col-md-6 col-md-offset-3 text-center">
+          <h3 class="text-center">Rotation Angle:</h3>
+          <h3><input class="text-center" id="rotationAngle" name="angle" type="number" min="0" max="360" step="1" value="0" readonly/> degrees</h3>
+          <div class="hidden">
+            <br/>
+            <h3 class="text-center">Tessellation Grade</h3>
+            <input id="tessellationGrade" name="tessellation" type="range" min="1" max="8" step="1" value="1" />
+            <br/>
+            <h3 class="text-center">View Select</h3>
+            <div class="btn-group col-md-offset-3" data-toggle="buttons" id="showWireframeSelector">
+              <label class="btn btn-primary active">
+                <input type="radio" name="view" id="showWireframe" checked> Wireframe View
+              </label>
+              <label class="btn btn-primary">
+                <input type="radio" name="view" id="showSolidView"> Filled-In View
+              </label>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/example3.js"></script>
+  <br/>
+  </body>
+</html>
+
+
