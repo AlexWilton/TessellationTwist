@@ -5,4 +5,5 @@ Exploration of applying tessellation to triangles in WebGL
 As part of a Computer Graphics assignment at University of St Andrews, triangle tessellation in WebGL was explored.
 
 ## Demo
-[Link to Live Demo](http://alexwilton.github.io/TessellationTwist/)
+[Link to Live Demo](http://alexwilton.github.io/TessellationTwist/)  
+(Recommend using firefox as chrome no longer supports this version of WebGL)
